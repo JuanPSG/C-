@@ -1,0 +1,68 @@
+﻿<Window x:Class="Calculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculadora"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="365" Width="350">
+
+
+
+    <Grid x:Name="tabla">
+        <!--definicion de los dos renglones para separar la pantalla de resultados y numeros-->
+        
+        
+        
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Background="#FF8B8B8B">
+            <Label x:Name="digito" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="0" FontFamily="Poppins" FontSize="24" Margin="0,20,20,20" Height="38" Width="46"></Label>
+        </StackPanel>
+        <!--parte numerica-->
+        <StackPanel Background="Black" Grid.Row="1">
+            <Grid x:Name="numeros">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Column="0" Grid.Row="0" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btn1" Click="btn1_Click">1</Button>
+                <Button Grid.Column="1" Grid.Row="0" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btn2">2</Button>
+                <Button Grid.Column="2" Grid.Row="0" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btn3">3</Button>
+                <Button Grid.Column="3" Grid.Row="0" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btnMas">+</Button>
+
+                <Button Grid.Column="0" Grid.Row="1" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btn4">4</Button>
+                <Button Grid.Column="1" Grid.Row="1" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btn5">5</Button>
+                <Button Grid.Column="2" Grid.Row="1" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btn6">6</Button>
+                <Button Grid.Column="3" Grid.Row="1" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btnMenos">-</Button>
+
+                <Button Grid.Column="0" Grid.Row="2" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btn7">7</Button>
+                <Button Grid.Column="1" Grid.Row="2" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btn8">8</Button>
+                <Button Grid.Column="2" Grid.Row="2" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btn9">9</Button>
+                <Button Grid.Column="3" Grid.Row="2" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btnX">x</Button>
+
+                <Button Grid.Column="0" Grid.Row="3" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btnPunto">.</Button>
+                <Button Grid.Column="1" Grid.Row="3" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btn0">0</Button>
+                <Button Grid.Column="2" Grid.Row="3" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btnDEL">DEL</Button>
+                <Button Grid.Column="3" Grid.Row="3" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btnDiv">/</Button>
+
+                <Button Grid.ColumnSpan="4" Grid.Row="4" Foreground="Black" Height="50" FontFamily="Poppins" FontSize="24" x:Name="btnIgual">=</Button>
+
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
